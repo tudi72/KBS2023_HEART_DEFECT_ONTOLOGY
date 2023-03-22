@@ -1,0 +1,13 @@
+(define-concept HeartDefect)
+(define-concept Diagnosis)
+(define-concept Treatment)
+(define-concept Method)
+
+(implies Diagnosis (and Treatable NonTreatable))
+(implies Treatment (and Invasive NonInvasive))
+
+(disjoint Diagnosis Treatment)
+(disjoint HeartDefect Treatment)
+(disjoint HeartDefect Diagnosis)
+(dispoint Treatable NonTreatable)
+(disjoint Invasive NonInvasive)
