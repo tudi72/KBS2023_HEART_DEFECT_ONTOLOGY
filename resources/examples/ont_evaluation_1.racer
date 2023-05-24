@@ -1,0 +1,81 @@
+; CQ1 : In ce parte a corpului se afla muschiul X?  -> X = lats
+
+(retrieve (?y) (and (?y BodyComponent) 
+	(?y lats composed-by)))
+
+(individual-fillers lats  is-component-of)
+
+; CQ2 : Ce exercitii antreneaza muschiul X? -> X = calves
+
+(individual-fillers calves  trained-by)
+
+; CQ3 : Cate tipuri de exercitii exista?
+
+(evaluate (length (retrieve-concept-instances 
+		'Exercise (current-abox) (all-individuals))))
+
+; CQ4 : Care sunt muschii care intra in partea
+	 inferioara/superioara a corpului?
+
+;Upper body
+(retrieve (?x) 
+	(and (?x Muscle)
+	(?y UpperBodyComponent)
+	(?x ?y is-component-of)))
+
+;Lower Body
+(retrieve (?x) 
+	(and (?x Muscle)
+	(?y LowerBodyComponent)
+	(?x ?y is-component-of)))
+
+; CQ5 : Care sunt exercitiile corespunzatoare antrenarii 
+	partii superioare/inferioare a corpului? 
+;Upper body
+(retrieve (?x) 
+	(and (?x Exercise)
+	(?y UpperBodyComponent)
+	(?x ?y involves)))
+
+;Lower Body
+(retrieve (?x) 
+	(and (?x Exercise)
+	(?y LowerBodyComponent)
+	(?x ?y involves)))
+
+; CQ6 : Ce antrenamente sunt disponibile in ziua de luni?
+
+(retrieve (?x ) 
+	(and (?y Day)
+	(?x ?y scheduled-on)))
+
+; CQ7 : Ce muschi antreneaza exrcitiul X? X = jumping-jacks
+
+(individual-fillers jumping-jacks trains)
+
+; CQ8 : Exista mai multe exercitii de antrenament 
+	pentru muschiul X decat pentru muschiul Y? 
+
+(evaluate (>=
+	(evaluate (length (retrieve-individual-fillers 
+		'calves 'trained-by (current-abox))))
+	(evaluate (length (retrieve-individual-fillers 
+		'deltoids 'trained-by (current-abox)))) 
+	))
+
+
+; CQ9 : Care muschi din partea inferioara/superioara 
+		sunt antrenati de exrcitiile existente?
+
+(retrieve (?x ) 
+	(and (?x Muscle)
+	(?y Exercise)
+	(?z UpperBodyComponent)
+	(?y ?z involves)
+	(?y ?x trains)))
+
+; CQ10 : Care sunt rezultatele exercitiului X? X = jump-rope 
+
+(individual-fillers jump-rope has-outcome)
+
+

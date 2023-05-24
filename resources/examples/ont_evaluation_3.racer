@@ -1,0 +1,76 @@
+;----------------------------------
+; ONTOLOGY EVALUATION
+;----------------------------------
+(evaluate(length (all-atomic-concepts)))
+(evaluate(length (all-roles)))
+(evaluate(length (all-individuals)))
+(evaluate(length (all-rules)))
+(get-tbox-language)(get-abox-language)
+(tbox-coherent?)
+(tbox-cyclic?)
+
+;-------------------------------------
+; COMPETENCY QUESTIONS - RACER
+;-------------------------------------
+
+;CQ1: What is COVID-19?
+(individual-told-attribute-value COVID-19 illnessDescription)
+
+;CQ2: Where has the COVID-19 its origin ?
+(individual-told-attribute-value COVID-19 origin)
+
+;CQ3: What are the symptoms of COVID-19?
+(concept-instances Symptom)
+
+;CQ4: Am I at risk of death if infected with COVID-19?
+(individual-told-attribute-value Death evolutionDescription)
+
+;CQ5: How can I protect myself from the Coronavirus?
+(concept-instances Protection)
+
+;CQ6: Which preconditions lead to severe forms of COVID-19?
+(concept-instances Precondition)
+
+;CQ7: What treatments are currently available?
+(concept-instances Treatment)
+
+;CQ8: What kinds of animals are predisposed to be affected by the Coronavirus?
+(concept-children Animal)
+
+;CQ9: How is Coronavirus transmitted?
+(concept-instances Transmission)
+
+;CQ10: How should I wash my hands?
+(individual-told-attribute-value WashingHands uniqueDescription)
+
+;CQ11: Is fever a symptom of COVID19?
+(individual-instance? Fever Symptom)
+
+;CQ12: Who does the Coronavirus attack in the first place?
+(role-range attacks)
+
+;CQ13: Are the face masks effective in preventing the COVID-19 infection?
+(individual-told-attribute-value Mask effective)
+
+;CQ14: Which are all cases that have the origin of infection in Madrid?
+(individual-fillers Madrid (inv has-origin-of-infection))
+ 
+;CQ15: Which are all cases that were detected in Amsterdam?	
+(individual-fillers Amsterdam (inv has-detection-location))
+
+
+;-------------------------------------
+; INTERROGATIONS - nRQL
+;-------------------------------------
+
+; CQ16: Which are all cases that are recovered?
+(evaluate (length (retrieve-individual-fillers 'recovered 'status-of (current-abox))))
+
+; CQ17: Which are all cases that are hospitalized?					 
+(evaluate (length  (retrieve-individual-fillers 'hospitalized 'status-of (current-abox))))
+
+; CQ18: Which are all relations that were connected to a human (considering the cases)?
+(retrieve (?x) (?x Human))
+
+; What is the verion of nRQL?
+(get-nrql-version)

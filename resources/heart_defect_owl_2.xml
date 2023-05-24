@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://com.kbs-project.com/congenital-heart-diseases.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://com.kbs-project.com/congenital-heart-diseases.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_ATRIUMS_AND_ATRIAL_SEPTUM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_AV_VALVES_AND_AV_SEPTAL_DEFECT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_CORONARY_ARTERIES_AND_ARTERIAL_DUCT_AND_PERICARDIUM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_GREAT_VEINS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_POSITION_AND_CONNECTION_OF_HEART"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_VA_VALVES_AND_GREAT_ARTERIES"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ABNORMALITIES_OF_VENTRICLES_AND_VENTRICULAR_SEPTUM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ARRHYTHMIA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BYDOCTOR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BYMYSELF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CHD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DIAGNOSISMETHOD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DIAGNOSTIC_CONGENITAL_AND_GENERIC_CARDIAC_CODES"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HEART_MUSCLE_DISEASE_AND_CARDIOMYOPATHIES"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#INVASIVE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NONINVASIVE"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NONPAINFUL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OUTLOOK"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PAINFUL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QUALITY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RHYTM_AND_CONDUCTION_DISTURBANCES"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SURGERY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SYMPTOM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TETRALLOGY_OF_FALLOT_AND_VARIANTS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TREATABLE_CHD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TREATMENT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-AT-HOME-FOR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-FOR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-INVASIVE-TREATMENT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-NONINVASIVE-TREATMENT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-OUTLOOK"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-QUALITY"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HAS-TREATMENT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IS-SYMPTOM-FOR"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#QUALITY-FOR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#POOR_WEIGHT_GAIN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CARDIAC_CATHETERIZATION"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SHORTNESS_OF_BREATH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CYANOSIS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MAGNETIC_RESONANCE_IMAGING"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ECHOCARDIOGRAM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PULSE_OXIMETER"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FAINTING"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CHEST_AREA_PAIN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#DRUG_TREATMENT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLUBBING_OF_FINGERS"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#CHD"/>
+        <ObjectUnionOf>
+            <Class IRI="#NONTREATABLE_CHD"/>
+            <Class IRI="#TREATABLE_CHD"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DIAGNOSISMETHOD"/>
+        <ObjectUnionOf>
+            <Class IRI="#BYDOCTOR"/>
+            <Class IRI="#BYMYSELF"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SYMPTOM"/>
+        <ObjectUnionOf>
+            <Class IRI="#NONPAINFUL"/>
+            <Class IRI="#PAINFUL"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TREATMENT"/>
+        <ObjectUnionOf>
+            <Class IRI="#INVASIVE"/>
+            <Class IRI="#NONINVASIVE"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_ATRIUMS_AND_ATRIAL_SEPTUM"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_AV_VALVES_AND_AV_SEPTAL_DEFECT"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_CORONARY_ARTERIES_AND_ARTERIAL_DUCT_AND_PERICARDIUM"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_GREAT_VEINS"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_POSITION_AND_CONNECTION_OF_HEART"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_VA_VALVES_AND_GREAT_ARTERIES"/>
+        <Class IRI="#TREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ABNORMALITIES_OF_VENTRICLES_AND_VENTRICULAR_SEPTUM"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ARRHYTHMIA"/>
+        <Class IRI="#TREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DIAGNOSTIC_CONGENITAL_AND_GENERIC_CARDIAC_CODES"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HEART_MUSCLE_DISEASE_AND_CARDIOMYOPATHIES"/>
+        <Class IRI="#TREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NONINVASIVE"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class IRI="#INVASIVE"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NONPAINFUL"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class IRI="#PAINFUL"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NONTREATABLE_CHD"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class IRI="#TREATABLE_CHD"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RHYTM_AND_CONDUCTION_DISTURBANCES"/>
+        <Class IRI="#TREATABLE_CHD"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SURGERY"/>
+        <Class IRI="#INVASIVE"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TETRALLOGY_OF_FALLOT_AND_VARIANTS"/>
+        <Class IRI="#NONTREATABLE_CHD"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#INVASIVE"/>
+        <Class IRI="#NONINVASIVE"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NONPAINFUL"/>
+        <Class IRI="#PAINFUL"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NONTREATABLE_CHD"/>
+        <Class IRI="#TREATABLE_CHD"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#DIAGNOSISMETHOD"/>
+        <NamedIndividual IRI="#CARDIAC_CATHETERIZATION"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DIAGNOSISMETHOD"/>
+        <NamedIndividual IRI="#ECHOCARDIOGRAM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DIAGNOSISMETHOD"/>
+        <NamedIndividual IRI="#MAGNETIC_RESONANCE_IMAGING"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ARRHYTHMIA"/>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TETRALLOGY_OF_FALLOT_AND_VARIANTS"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+        <NamedIndividual IRI="#ECHOCARDIOGRAM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+        <NamedIndividual IRI="#PULSE_OXIMETER"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+        <NamedIndividual IRI="#CHEST_AREA_PAIN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#PREMATURE_VENTRICULAR_CONTRACTION"/>
+        <NamedIndividual IRI="#SHORTNESS_OF_BREATH"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#CARDIAC_CATHETERIZATION"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#ECHOCARDIOGRAM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#MAGNETIC_RESONANCE_IMAGING"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#CLUBBING_OF_FINGERS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#CYANOSIS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#FAINTING"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#POOR_WEIGHT_GAIN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <NamedIndividual IRI="#TETRALOGY_OF_FALLOT"/>
+        <NamedIndividual IRI="#SHORTNESS_OF_BREATH"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#HAS-INVASIVE-TREATMENT"/>
+        <ObjectProperty IRI="#HAS-TREATMENT"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#HAS-NONINVASIVE-TREATMENT"/>
+        <ObjectProperty IRI="#HAS-TREATMENT"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-AT-HOME-FOR"/>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-FOR"/>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#QUALITY-FOR"/>
+        <ObjectProperty IRI="#HAS-QUALITY"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IS-SYMPTOM-FOR"/>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-AT-HOME-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BYMYSELF"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#DIAGNOSISMETHOD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-INVASIVE-TREATMENT"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-NONINVASIVE-TREATMENT"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-OUTLOOK"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-QUALITY"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#TREATMENT"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HAS-TREATMENT"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IS-SYMPTOM-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SYMPTOM"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#QUALITY-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#QUALITY"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-AT-HOME-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DIAGNOSIS-METHOD-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#DIAGNOSISMETHOD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BYMYSELF"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-INVASIVE-TREATMENT"/>
+        <Class IRI="#INVASIVE"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-NONINVASIVE-TREATMENT"/>
+        <Class IRI="#NONINVASIVE"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-OUTLOOK"/>
+        <Class IRI="#OUTLOOK"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-QUALITY"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#QUALITY"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-SYMPTOM"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SYMPTOM"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HAS-TREATMENT"/>
+        <Class IRI="#TREATMENT"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IS-SYMPTOM-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CHD"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#QUALITY-FOR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#TREATMENT"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#DRUG_TREATMENT"/>
+        <IRI>#PREMATURE_VENTRICULAR_CONTRACTION</IRI>
+        <IRI>#HAS-TREATMENT</IRI>
+    </AnnotationAssertion>
+</Ontology>

@@ -1,0 +1,65 @@
+(full-reset)
+(racer-read-file "C:/Users/Cuci/Desktop/Proiect final/family1.racer")
+
+;---------------------------
+;Consistency
+;---------------------------
+(abox-consistent?)				
+(tbox-cyclic?)
+(tbox-coherent?)
+
+(realize-abox)
+(classify-tbox)
+
+; ---------------------------
+; Size
+; ---------------------------
+(evaluate (length (all-individuals)))
+(evaluate (length (all-atomic-concepts)))
+(evaluate (length (all-roles)))
+(evaluate (length (all-rules)))
+
+(all-concept-assertions)		
+(all-role-assertions)			
+(all-constraints)			
+
+(describe-tbox)
+(describe-abox)
+	
+(taxonomy)				
+
+; ---------------------------
+; Expressivity
+; ---------------------------
+
+(get-tbox-language)
+(get-abox-language)
+
+(all-features)
+(all-transitive-roles)
+
+; ---------------------------
+; Domain coverage - competency questions
+; ---------------------------
+;---------------------------------------------------------------
+
+(evaluate "CQ1: toate instantele:")
+(concept-instances *top*)
+
+(evaluate "CQ2: Este barbat:")
+(individual-instance? cuci man)
+
+(evaluate "CQ3: Este Femeie:")
+(individual-instance? ana woman)
+
+(evaluate "CQ4: Sunt frati:")
+(individuals-related? chilian mayer has-sibling)
+
+(evaluate "CQ4: Sunt veri:")
+(individuals-related? stan chilian has-cousin)
+
+(evaluate "CQ5: Este tata:")
+(individual-instance? cuci father)
+
+(evaluate "CQ6: Este mama:")
+(individual-instance? ana mother)

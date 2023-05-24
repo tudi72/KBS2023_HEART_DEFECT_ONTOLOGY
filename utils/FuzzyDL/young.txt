@@ -1,0 +1,26 @@
+(define-fuzzy-concept LessThan18 crisp(0,100,0,18))
+(define-fuzzy-concept LowAge left-shoulder(0,100,10,30))
+(define-fuzzy-concept MoreThan18 crisp(0,100,18,100))
+(define-fuzzy-concept MoreThan30 right-shoulder(0,100,18,100))
+(define-fuzzy-concept AboutLT18 left-shoulder(0,100,18,22))
+(define-fuzzy-concept Eq22 crisp(0,100,22,22))
+(define-modifier very linear-modifier(3))
+
+(functional age)
+
+(define-concept Minor (and Person (some age LessThan18)))
+(define-concept Major (and Person (some age MoreThan18)))
+(define-concept AboutMinor (and Person (some age AboutLT18)))
+(define-concept Mature (and Person (some age MoreThan30)))
+(define-concept Has22 (and Person (some age Eq22)))
+(define-concept YoungPerson (and Person (some age LowAge)))
+(define-concept VeryYoungPerson (very YoungPerson))
+
+
+(instance Tudorita Has22)
+(instance Umberto Major)
+
+
+(min-subs? Umberto YoungPerson)
+(min-instance? Umberto Mature)
+(min-instance? Tudorita YoungPerson)

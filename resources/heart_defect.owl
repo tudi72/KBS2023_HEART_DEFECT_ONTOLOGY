@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:owl2="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+   xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+   xmlns="http://com.kbs-project.com/congenital-heart-diseases.owl#"
+   xml:base="http://com.kbs-project.com/congenital-heart-diseases.owl">
+   <owl:Ontology rdf:about=""/>
+   <owl:ObjectProperty rdf:ID="DIAGNOSIS-METHOD-AT-HOME-FOR">
+      <owl:inverseOf rdf:resource="#HAS-DIAGNOSIS-METHOD-AT-HOME"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="BYMYSELF"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="IS-SYMPTOM-FOR">
+      <owl:inverseOf rdf:resource="#HAS-SYMPTOM"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="SYMPTOM"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-SYMPTOM">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#SYMPTOM"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-DIAGNOSIS-METHOD-AT-HOME">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#BYMYSELF"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="DIAGNOSIS-METHOD-FOR">
+      <owl:inverseOf rdf:resource="#HAS-DIAGNOSIS-METHOD"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="DIAGNOSISMETHOD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-DIAGNOSIS-METHOD">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#DIAGNOSISMETHOD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-OUTLOOK">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class rdf:ID="OUTLOOK"/>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="QUALITY-FOR">
+      <owl:inverseOf rdf:resource="#HAS-QUALITY"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="QUALITY"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="TREATMENT"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-NONINVASIVE-TREATMENT">
+      <rdfs:subPropertyOf rdf:resource="#HAS-TREATMENT"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class rdf:ID="NONINVASIVE"/>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-QUALITY">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#TREATMENT"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#QUALITY"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-INVASIVE-TREATMENT">
+      <rdfs:subPropertyOf rdf:resource="#HAS-TREATMENT"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class rdf:ID="INVASIVE"/>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:ID="HAS-TREATMENT">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#CHD"/>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:domain>
+      <rdfs:range>
+         <owl:Class rdf:about="#TREATMENT"/>
+      </rdfs:range>
+   </owl:ObjectProperty>
+   <owl:Class rdf:ID="NONTREATABLE_CHD">
+      <owl:disjointWith>
+         <owl:Class rdf:ID="TREATABLE_CHD"/>
+      </owl:disjointWith>
+   </owl:Class>
+   <owl:Class rdf:ID="NONPAINFUL">
+      <owl:disjointWith>
+         <owl:Class rdf:ID="PAINFUL"/>
+      </owl:disjointWith>
+   </owl:Class>
+   <owl:Class rdf:about="#NONINVASIVE">
+      <owl:disjointWith>
+         <owl:Class rdf:about="#INVASIVE"/>
+      </owl:disjointWith>
+   </owl:Class>
+   <owl:Class rdf:about="#CHD">
+      <owl:equivalentClass>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#TREATABLE_CHD"/>
+               <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+            </owl:unionOf>
+         </owl:Class>
+      </owl:equivalentClass>
+   </owl:Class>
+   <owl:Class rdf:about="#SYMPTOM">
+      <owl:equivalentClass>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#PAINFUL"/>
+               <owl:Class rdf:about="#NONPAINFUL"/>
+            </owl:unionOf>
+         </owl:Class>
+      </owl:equivalentClass>
+   </owl:Class>
+   <owl:Class rdf:about="#TREATMENT">
+      <owl:equivalentClass>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="#INVASIVE"/>
+               <owl:Class rdf:about="#NONINVASIVE"/>
+            </owl:unionOf>
+         </owl:Class>
+      </owl:equivalentClass>
+   </owl:Class>
+   <owl:Class rdf:about="#DIAGNOSISMETHOD">
+      <owl:equivalentClass>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:ID="BYDOCTOR"/>
+               <owl:Class rdf:about="#BYMYSELF"/>
+            </owl:unionOf>
+         </owl:Class>
+      </owl:equivalentClass>
+   </owl:Class>
+   <owl:Class rdf:ID="SURGERY">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#INVASIVE"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_AV_VALVES_AND_AV_SEPTAL_DEFECT">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_ATRIUMS_AND_ATRIAL_SEPTUM">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_CORONARY_ARTERIES_AND_ARTERIAL_DUCT_AND_PERICARDIUM">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_GREAT_VEINS">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_POSITION_AND_CONNECTION_OF_HEART">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_VENTRICLES_AND_VENTRICULAR_SEPTUM">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="DIAGNOSTIC_CONGENITAL_AND_GENERIC_CARDIAC_CODES">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="TETRALLOGY_OF_FALLOT_AND_VARIANTS">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#NONTREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="HEART_MUSCLE_DISEASE_AND_CARDIOMYOPATHIES">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#TREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="RHYTM_AND_CONDUCTION_DISTURBANCES">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#TREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ABNORMALITIES_OF_VA_VALVES_AND_GREAT_ARTERIES">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#TREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:ID="ARRHYTHMIA">
+      <rdfs:subClassOf>
+         <owl:Class rdf:about="#TREATABLE_CHD"/>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:about="#NONTREATABLE_CHD">
+      <rdfs:subClassOf>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class>
+                  <owl:complementOf>
+                     <owl:Class rdf:about="#TREATABLE_CHD"/>
+                  </owl:complementOf>
+               </owl:Class>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:about="#NONPAINFUL">
+      <rdfs:subClassOf>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class>
+                  <owl:complementOf>
+                     <owl:Class rdf:about="#PAINFUL"/>
+                  </owl:complementOf>
+               </owl:Class>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <owl:Class rdf:about="#NONINVASIVE">
+      <rdfs:subClassOf>
+         <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+               <owl:Class>
+                  <owl:complementOf>
+                     <owl:Class rdf:about="#INVASIVE"/>
+                  </owl:complementOf>
+               </owl:Class>
+            </owl:intersectionOf>
+         </owl:Class>
+      </rdfs:subClassOf>
+   </owl:Class>
+   <TETRALLOGY_OF_FALLOT_AND_VARIANTS rdf:ID="TETRALOGY_OF_FALLOT">
+      <HAS-DIAGNOSIS-METHOD rdf:resource="#MAGNETIC_RESONANCE_IMAGING"/>
+      <HAS-DIAGNOSIS-METHOD rdf:resource="#CARDIAC_CATHETERIZATION"/>
+      <HAS-DIAGNOSIS-METHOD rdf:resource="#ECHOCARDIOGRAM"/>
+      <HAS-SYMPTOM rdf:resource="#POOR_WEIGHT_GAIN"/>
+      <HAS-SYMPTOM rdf:resource="#CLUBBING_OF_FINGERS"/>
+      <HAS-SYMPTOM rdf:resource="#FAINTING"/>
+      <HAS-SYMPTOM rdf:resource="#SHORTNESS_OF_BREATH"/>
+      <HAS-SYMPTOM rdf:resource="#CYANOSIS"/>
+   </TETRALLOGY_OF_FALLOT_AND_VARIANTS>
+   <DIAGNOSISMETHOD rdf:ID="MAGNETIC_RESONANCE_IMAGING">
+   </DIAGNOSISMETHOD>
+   <DIAGNOSISMETHOD rdf:ID="CARDIAC_CATHETERIZATION">
+   </DIAGNOSISMETHOD>
+   <DIAGNOSISMETHOD rdf:ID="ECHOCARDIOGRAM">
+   </DIAGNOSISMETHOD>
+   <ARRHYTHMIA rdf:ID="PREMATURE_VENTRICULAR_CONTRACTION">
+      <HAS-DIAGNOSIS-METHOD-AT-HOME rdf:resource="#PULSE_OXIMETER"/>
+      <HAS-DIAGNOSIS-METHOD rdf:resource="#ECHOCARDIOGRAM"/>
+      <DRUG_TREATMENT rdf:resource="#HAS-TREATMENT"/>
+      <HAS-SYMPTOM rdf:resource="#CHEST_AREA_PAIN"/>
+      <HAS-SYMPTOM rdf:resource="#SHORTNESS_OF_BREATH"/>
+   </ARRHYTHMIA>
+</rdf:RDF>
