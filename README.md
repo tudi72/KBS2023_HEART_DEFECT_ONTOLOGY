@@ -1,4 +1,5 @@
-# Fuzzy logic learner
+# Ontology engineering
+Integrating in a layered architecture in Python a Fuzzy learner, SparQL learner, and RacerPro learner. Extracting information from ontology based on these technologies for detecting heart defects and asking user-related questions over symptoms of these anomalies. 
 ![heart_defect_ontology-01](https://github.com/tudi72/KBS2023_HEART_DEFECT_ONTOLOGY/assets/33194623/0ce5300b-b08a-412b-9614-46210e4df1a0)
 ![heart_defect_ontology-02](https://github.com/tudi72/KBS2023_HEART_DEFECT_ONTOLOGY/assets/33194623/7e4c81cb-f8d9-4a0f-8bee-cb1cfc65107f)
 ![heart_defect_ontology-03](https://github.com/tudi72/KBS2023_HEART_DEFECT_ONTOLOGY/assets/33194623/acb0727c-5fb0-4663-b0eb-cc0a643201fa)
